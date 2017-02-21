@@ -9,7 +9,7 @@ if (env === 'development') {
 		'storage': __dirname + '/data/dev-api.sqlite'
 	});
 } else {
-	sequelize = new sequelize(process.env.DATABASE_URL, {
+	sequelize = new Sequelize(process.env.DATABASE_URL, {
 		dialect: 'postgres'
 	});
 }
